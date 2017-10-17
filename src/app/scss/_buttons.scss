@@ -1,0 +1,21 @@
+.btn-gradient {
+  @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
+          $bg-gradient-color-1 20%, $bg-gradient-color-2);
+}
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.425rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  color: $text-color;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  &.btn-social {
+    height: 50px;
+    padding: 0;
+  }
+}

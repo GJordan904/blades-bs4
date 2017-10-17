@@ -1,0 +1,19 @@
+.trans-section {
+  @include section(linear-gradient(180deg, rgba(35, 50, 75, 0.64), transparent, rgba(35, 50, 75, 0.64)), cover, false);
+}
+
+.section {
+  @include section(transparent, cover, false);
+}
+
+.full-section {
+  @include section(transparent, cover, false);
+  padding: 0;
+  margin: 0;
+
+  .centered-header {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+

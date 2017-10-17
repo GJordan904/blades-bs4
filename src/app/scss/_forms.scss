@@ -1,0 +1,12 @@
+.form-control, .form-control-lg, .form-control-sm {
+  background-color: rgba(0, 0, 0, .15);
+  border: none;
+  border-bottom: 2px solid;
+  color: $text-muted;
+  margin: 2rem 0;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $bg-gradient-color-2;
+  }
+}

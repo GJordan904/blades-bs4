@@ -1,0 +1,49 @@
+@import '../../scss/variables';
+
+.navbar {
+
+  .navbar-nav {
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+
+    &.above {
+      width: 0;
+
+      .nav-item {
+        .nav-link {
+          color: $blue;
+        }
+      }
+    }
+    .nav-item {
+      font-size: 1.75rem;
+      width: 20%;
+      text-align: center;
+
+      &.active {
+        .nav-link {
+          color: $text-bold;
+          font-weight: $font-weight-bold;
+        }
+      }
+
+      .nav-link {
+        color: $gray-100;
+      }
+
+      .navbar-brand {
+        height: 72px;
+        width: 100%;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &.navbar-dark {
+    background: rgba($bg-gradient-color-1, .55);
+  }
+}

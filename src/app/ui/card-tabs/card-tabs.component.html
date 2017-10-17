@@ -1,0 +1,12 @@
+<div [ngClass]="cardClasses">
+    <div class="card-header nav-card">
+        <ul [ngClass]="navClasses">
+            <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [ngClass]="{'active': tab.active, 'nav-item': true}">
+                {{tab.title}}
+            </li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <ng-content></ng-content>
+    </div>
+</div>

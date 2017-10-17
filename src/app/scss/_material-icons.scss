@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.material-icons {
+  margin: 0 1rem;
+
+  &.md-1 {font-size: 1rem}
+  &.md-2 {font-size: 2rem}
+  &.md-3 {font-size: 3rem}
+  &.md-4 {font-size: 4rem}
+  &.md-5 {font-size: 5rem}
+  &.md-6 {font-size: 6rem}
+  &.md-7 {font-size: 7rem}
+  &.md-8 {font-size: 8rem}
+
+  &.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+    &.md-inactive {color: rgba(0, 0, 0, 0.26);}
+  }
+  &.md-light {
+    color: rgba(255, 255, 255, 1);
+    &.md-inactive {color: rgba(255, 255, 255, 0.3);}
+  }
+
+  &.md-brand { color: $text-bold }
+}

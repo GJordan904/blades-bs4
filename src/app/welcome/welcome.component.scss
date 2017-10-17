@@ -1,0 +1,87 @@
+@import "../scss/variables";
+@import "../scss/mixins";
+
+.header-section {
+  padding-top: 74px;
+  height: 100vh;
+
+  .content {
+    height: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include section(url('/assets/img/blade-salon-header-image2.jpg') center, cover, false);
+  }
+  @include media-breakpoint-between(md, lg) {
+    @include section(url('/assets/img/blade-salon-header-image2-md.jpg') center, cover, false);
+  }
+  @include media-breakpoint-between(sm, md) {
+    @include section(url('/assets/img/blade-salon-header-image2-sm.jpg') center, cover, false);
+  }
+  @include media-breakpoint-down(sm) {
+    @include section(url('/assets/img/blade-salon-header-image2-xs.jpg') center, cover, false);
+  }
+}
+
+.image-row {
+  @include make-row;
+  margin: 5rem 0 0 0;
+  padding: 0;
+
+  .image {
+    @include make-col-ready;
+    @include make-col(3);
+    margin: 0;
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.hours-row {
+  @include make-row;
+  margin: 5rem 0 0 0;
+  padding: 0 5rem 0 0;
+  justify-content: space-between;
+  align-items: center;
+
+  .verse-banner {
+    @include make-col-ready;
+    @include make-col(10);
+    background-color: $blue;
+    padding: 2rem 1rem 2rem 5rem;
+    font-size: 1.5rem;
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
+  }
+
+  .hour-list {
+    list-style: none;
+    font-size: 1.5rem;
+
+  }
+}
+
+.team-card {
+  @include elevation-2;
+  @include elevation-hover;
+  background: radial-gradient(ellipse, $blue, rgba($blue, .1));
+
+  .card-body {
+    background-color: $blue;
+
+    .card-title {
+      color: $indigo;
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+}

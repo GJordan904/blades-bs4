@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: $body-bg;
+  background-size: cover;
+  color: $text-color;
+}
+h1, h2, h3, h4, h5 {
+  margin: $headings-margin-top 0 $headings-margin-bottom 0;
+  span {
+    color: $text-bold;
+    font-weight: $font-weight-bold;
+
+    &.next {
+      display: block;
+      line-height: .75;
+    }
+  }
+}
+.hr {
+  height: 1px;
+  display: block;
+  background: radial-gradient(ellipse, $indigo 0%, transparent 100%);
+}
+
