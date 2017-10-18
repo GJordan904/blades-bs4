@@ -8,6 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {ErrorComponent} from './error/error.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   providers: [
@@ -16,7 +17,8 @@ import {ErrorComponent} from './error/error.component';
   declarations: [
     AppComponent,
     WelcomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
