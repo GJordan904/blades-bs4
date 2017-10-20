@@ -1,11 +1,11 @@
 <nav [@animNavBg]="location"
      #navbar
-     class="navbar fixed-top navbar-expand-md navbar-dark" >
+     class="navbar fixed-top navbar-expand-lg navbar-dark" >
   <button class="navbar-toggler" type="button" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav" [@animUpNavNav]="location">
       <li class="nav-item active" [@animNavLinks]="location">
         <a routerLink="/" class="nav-link" href="#">Home</a>
       </li>
@@ -13,7 +13,7 @@
         <a href="/features" class="nav-link">Team</a>
       </li>
       <li class="nav-item" [@animNavLogo]="location">
-        <a class="navbar-brand" href="#"><img src="/assets/img/logo.svg"></a>
+        <a class="navbar-brand" href="#"><img src="/assets/img/logo/blades.svg"></a>
       </li>
       <li class="nav-item" [@animNavLinks]="location">
         <a routerLink="/pricing" class="nav-link" href="#">Services</a>
@@ -23,17 +23,17 @@
       </li>
     </ul>
 
-    <ul class="navbar-nav above" [@animNavNav]="location" *ngIf="location === 'below'">
-      <li class="nav-item active" [@animLowerLinks]="location">
+    <ul class="navbar-nav above" [@animNavNav]="location">
+      <li class="nav-item active">
         <a routerLink="/" class="nav-link" href="#">Home</a>
       </li>
-      <li class="nav-item" [@animLowerLinks]="location">
+      <li class="nav-item">
         <a href="/features" class="nav-link">Team</a>
       </li>
-      <li class="nav-item" [@animLowerLinks]="location">
+      <li class="nav-item">
         <a routerLink="/pricing" class="nav-link" href="#">Services</a>
       </li>
-      <li class="nav-item" [@animLowerLinks]="location">
+      <li class="nav-item">
         <a class="nav-link" href="#">Gallery</a>
       </li>
     </ul>

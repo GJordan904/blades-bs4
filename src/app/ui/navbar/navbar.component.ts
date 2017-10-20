@@ -3,7 +3,7 @@ import {ScrollService} from '../../services/scroll.service';
 import {ManageVisibility} from '../directives/manage-visibility.class';
 import {
   navbarBgAnimation, navbarLinkAnimation, navbarLogoAnimation,
-  navbarLowerLinkAnimation, navbarNavAnimation
+  navbarLowerLinkAnimation, navbarNavAnimation, upperNavbarNavAnimation
 } from './navbar.animations';
 
 @Component({
@@ -15,13 +15,15 @@ import {
     navbarLinkAnimation(),
     navbarLogoAnimation(),
     navbarNavAnimation(),
-    navbarLowerLinkAnimation()
+    navbarLowerLinkAnimation(),
+    upperNavbarNavAnimation()
   ]
 })
 export class NavbarComponent extends ManageVisibility {
   @ViewChild('navbar')navbar: ElementRef;
   private elHeight: number;
   public location = 'above';
+  public upperNavStyles = {width: '100%'};
 
   constructor(public el: ElementRef, public scroll: ScrollService) {
     super(el, scroll);
@@ -42,11 +44,13 @@ export class NavbarComponent extends ManageVisibility {
     if (!this.eivVisible && this.scroll.pos >= trigger) {
       this.eivVisible = true;
       this.location = 'below';
+      this.upperNavStyles.width = '25%';
     }
 
     if(this.eivVisible && this.scroll.pos < trigger) {
       this.eivVisible = false;
       this.location = 'above';
+      this.upperNavStyles.width = '100%';
     }
   }
 

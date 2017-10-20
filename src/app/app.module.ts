@@ -8,6 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {ErrorComponent} from './error/error.component';
+import { NguiMapModule} from '@ngui/map';
 
 @NgModule({
   providers: [
@@ -22,7 +23,8 @@ import {ErrorComponent} from './error/error.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyClZkV6u8E5VgULIpqpP5KkCzKhYKi0DZk'})
   ],
   bootstrap: [AppComponent]
 })

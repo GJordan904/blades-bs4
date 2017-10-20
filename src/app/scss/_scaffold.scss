@@ -9,14 +9,11 @@ body {
 }
 h1, h2, h3, h4, h5 {
   margin: $headings-margin-top 0 $headings-margin-bottom 0;
-  span {
-    color: $text-bold;
-    font-weight: $font-weight-bold;
 
-    &.next {
-      display: block;
-      line-height: .75;
-    }
+  .sub {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    display: block;
   }
 }
 .hr {

@@ -81,12 +81,12 @@ $theme-colors: (
 $theme-color-interval: 8%;
 
 $shadow-color:        rgba($black, .45) ;
-$bg-gradient-color-1: rgba(#618CAA, 0.75);
-$bg-gradient-color-2: rgba(#535C70, 0.75);
+$bg-gradient-color-1: #618CAA;
+$bg-gradient-color-2: #535C70;
 $brand-gradient: radial-gradient(ellipse, farthest-side, 10%, 0, $bg-gradient-color-1 20%, $bg-gradient-color-2);
 $text-color: #686460;
 $text-bold: $indigo;
-$text-muted: lighten(#686460, 10%);
+$text-muted: lighten($text-color, 10%);
 
 // Options
 //
@@ -158,7 +158,8 @@ $grid-breakpoints: (
         sm: 576px,
         md: 768px,
         lg: 992px,
-        xl: 1200px
+        xl: 1200px,
+        xxl: 1920px
 );
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);

@@ -4,22 +4,20 @@
 .header-section {
   padding-top: 74px;
   height: 100vh;
+  @include section(url('/assets/img/headers/home-header-mobile.jpg') fixed center, cover, false);
 
   .content {
     height: 100%;
   }
 
-  @include media-breakpoint-up(lg) {
-    @include section(url('/assets/img/blade-salon-header-image2.jpg') center, cover, false);
+  @include media-breakpoint-up(xl) {
+    @include section(url('/assets/img/headers/home-header-uw.jpg') fixed center, cover, false);
   }
-  @include media-breakpoint-between(md, lg) {
-    @include section(url('/assets/img/blade-salon-header-image2-md.jpg') center, cover, false);
+  @include media-breakpoint-between(md, xl) {
+    @include section(url('/assets/img/headers/home-header-desktop.jpg') fixed center, cover, false);
   }
   @include media-breakpoint-between(sm, md) {
-    @include section(url('/assets/img/blade-salon-header-image2-sm.jpg') center, cover, false);
-  }
-  @include media-breakpoint-down(sm) {
-    @include section(url('/assets/img/blade-salon-header-image2-xs.jpg') center, cover, false);
+    @include section(url('/assets/img/headers/home-header-tablet.jpg') fixed center, cover, false);
   }
 }
 
@@ -30,7 +28,10 @@
 
   .image {
     @include make-col-ready;
-    @include make-col(3);
+    @include make-col(6);
+    @include media-breakpoint-up(sm) {
+      @include make-col(3);
+    }
     margin: 0;
     padding: 0;
 
@@ -44,7 +45,6 @@
 .hours-row {
   @include make-row;
   margin: 5rem 0 0 0;
-  padding: 0 5rem 0 0;
   justify-content: space-between;
   align-items: center;
 
@@ -67,21 +67,39 @@
   }
 }
 
-.team-card {
-  @include elevation-2;
-  @include elevation-hover;
-  background: radial-gradient(ellipse, $blue, rgba($blue, .1));
+.masonry-cards {
+  width: 100%;
 
-  .card-body {
-    background-color: $blue;
+  .team-card {
+    @include elevation-2;
+    @include elevation-hover;
+    background: radial-gradient(ellipse, $blue, rgba($blue, .35));
+    margin-bottom: 3rem;
 
-    .card-title {
-      color: $indigo;
+    .card-body {
+      background-color: $blue;
+
+      .card-title {
+        color: $indigo;
+      }
     }
-  }
-  img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xxl)) {
+      width: 23%
+    }
+    @include media-breakpoint-down(xxl) {
+      width: 31%;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 47%;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 98%;
+    }
   }
 }

@@ -36,7 +36,7 @@ export function navbarLinkAnimation() {
       transform: 'scale(0)'
     })),
     transition('above => below', animate('350ms ease-in')),
-    transition('below => above', animate('350ms 500ms ease-in'))
+    transition('below => above', animate('350ms 1.5s ease-in'))
   ])
 }
 
@@ -54,16 +54,22 @@ export function navbarLowerLinkAnimation() {
   ])
 }
 
+export function upperNavbarNavAnimation() {
+
+  return trigger('animUpNavNav', [
+    state('above', style({width: '100%'})),
+    state('below', style({width: '25%'})),
+    transition('above => below', animate('550ms 350ms ease-in')),
+    transition('below => above', animate('550ms ease-in'))
+  ])
+}
+
 export function navbarNavAnimation() {
 
   return trigger('animNavNav', [
-    state('below', style({width: '100%'})),
-    transition(':enter', [
-      style({width: '0%'}),
-      animate('500ms 1.75s ease-in')
-    ]),
-    transition(':leave', [
-      animate('500ms ease-in', style({width: '0%'}))
-    ])
+    state('above', style({transform: 'translateX(100%)', width: '0%'})),
+    state('below', style({transform: 'translateX(0)', width: '100%'})),
+    transition('above => below', animate('550ms 1.5s ease-in')),
+    transition('below => above', animate('550ms ease-in'))
   ])
 }

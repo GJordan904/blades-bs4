@@ -1,0 +1,64 @@
+@import './scss/variables';
+
+.site-footer {
+  background-color: lighten($body-bg, 5%);
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    @include make-col-ready;
+    @include make-col(12);
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      @include make-col(3);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(2);
+    }
+  }
+}
+.navbar {
+  &.sub-footer {
+    background-color: $bg-gradient-color-2;
+  }
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding-left: 1.3rem;
+
+    &:before {
+      font-family: Material Icons;
+      font-size: 1.75rem;
+      color: $blue;
+      display: inline-block;
+      margin-left: -1.3rem;
+      margin-right: 1rem;
+      width: 1.3rem;
+    }
+  }
+
+  .address {
+    &:before {
+      content: '\E55F';
+    }
+  }
+  .phone {
+    &:before {
+      content: '\E0CD';
+    }
+  }
+  .email {
+    &:before {
+      content: '\E0BE';
+    }
+  }
+}
